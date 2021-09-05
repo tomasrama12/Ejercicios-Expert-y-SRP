@@ -8,8 +8,6 @@ namespace SRP
         public string Titulo { get ; }
         public string Autor { get ; }
         public string Codigo { get ;  }
-        public string SectorBiblioteca { get ; set; }
-        public string EstanteBiblioteca { get ; set; }
 
         public Libro(String titulo, String autor, String codigo)
         {
@@ -18,11 +16,6 @@ namespace SRP
             this.Codigo = codigo;
         }
 
-        public void AlmacenarLibro(String sector, String estante)
-        {
-            this.SectorBiblioteca = sector;
-            this.EstanteBiblioteca = estante;
-        }
         /*
         No se cumple con el principio SRP ya que esta clase tiene mas de un motivo para cambiar,
         el método AlmacenarLibro puede cambiar dependiendo de las necesidades del usario, ej: Se podría agregar un edificio
