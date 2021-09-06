@@ -5,6 +5,11 @@ namespace Library
 {
     public class AppointmentService
     {
+        // Esta clase no cumple con el principio SRP ya que tiene gran cantidad de razones para cambiar.
+        // Hacer clase Doctor, ya que a esta se le pueden agregar diferentes datos como su especialidad entre otros.
+        // Hacer clase Paciente, ya que a esta se le pueden agregar diferentes datos como su edad entre otros.
+        // Hacer clase Validar, para completar las validaciones.
+        
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
